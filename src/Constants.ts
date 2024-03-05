@@ -1,8 +1,13 @@
 
 
-export const horizontalAxis  = ["a","b","c","d","e","f","g","h"]
-export const verticalAxis =  ["1","2","3","4","5","6","7","8"]
+export const HORIZONTAL_AXIS  = ["a","b","c","d","e","f","g","h"]
+export const VERTICAL_AXIS =  ["1","2","3","4","5","6","7","8"]
 
+export const GRID_SIZE = 100;
+
+export function samePosition(p1: Position, p2: Position){
+    return p1.x === p2.x && p1.y === p2.y;
+}
 
 export interface Position {
     x : number
@@ -81,7 +86,7 @@ export const initialBoardState : Piece[] = [
     {
         image: "assets/images/bishop_b.png",
         position : {
-            x:3,
+            x:5,
             y:7,             
         },
         type: PieceType.BISHOP,
@@ -90,7 +95,7 @@ export const initialBoardState : Piece[] = [
     {
         image: "assets/images/queen_b.png",
         position : {
-            x:4,
+            x:3,
             y:7,             
         }, 
         type: PieceType.QUEEN,
@@ -99,7 +104,7 @@ export const initialBoardState : Piece[] = [
     {
         image: "assets/images/king_b.png",
         position : {
-            x:5,
+            x:4,
             y:7,             
         }, 
         type: PieceType.KING,
